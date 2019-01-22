@@ -22,12 +22,12 @@ class Calculator(private var text: String) {
     fun calculate(): Float {
         return TextToOperationConversor(text).result
     }
-    enum class OperationType(val value: Int) {
+    private enum class OperationType(val value: Int) {
         SUM(0),
         SUBTRACT(1),
     }
 
-    class ArithmeticLogic(private var x: Float, private var y: Float, private var operationType: OperationType) {
+    private class ArithmeticLogic(private var x: Float, private var y: Float, private var operationType: OperationType) {
         var result: Float = -1f
         get() {
             return when (this.operationType) {
@@ -43,7 +43,7 @@ class Calculator(private var text: String) {
         }
     }
 
-    class TextToOperationConversor(private var text: String){
+    private class TextToOperationConversor(private var text: String){
         private var numberList: MutableList<Float> = mutableListOf()
         private var operations: MutableList<OperationType> = mutableListOf()
         var result: Float = -1f
