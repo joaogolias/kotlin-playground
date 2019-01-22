@@ -61,7 +61,7 @@ class Calculator(private var text: String) {
         }
 
         private fun setLists() {
-            this.text = this.text.replace(" +", "")
+            this.text = this.text.replace(Regex(" +"), "")
             for (char in text) {
                 try {
                     val number = char.toString().toFloat()
@@ -87,7 +87,7 @@ class Calculator(private var text: String) {
 
 fun main() {
     print("2+2+5-4 = ")
-    println(Calculator("2+2+5-4").calculate())
+    println(Calculator("2  + 2   + 5-   4").calculate())
     print("2+7-3+5-1-9+4 = ")
-    print(Calculator("2+7-3+5-1-9+4").calculate())
+    print(Calculator(" 2 +7- 3+ 5-   1 -9 +       4     ").calculate())
 }
