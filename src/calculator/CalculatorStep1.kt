@@ -14,8 +14,9 @@ import java.io.IOException
 * It receives a string and perform it calculation (numbers 0 to 9)
 * */
 class Calculator(private var text: String) {
-    fun setText(text: String) {
+    fun setText(text: String): Calculator {
         this.text = text
+        return this
     }
 
     fun calculate(): Float {
@@ -86,8 +87,9 @@ class Calculator(private var text: String) {
 }
 
 fun main() {
+    val calculator = Calculator("")
     print("2+2+5-4 = ")
-    println(Calculator("2  + 2   + 5-   4").calculate())
+    println(calculator.setText("2  + 2   + 5-   4").calculate())
     print("2+7-3+5-1-9+4 = ")
-    print(Calculator(" 2 +7- 3+ 5-   1 -9 +       4     ").calculate())
+    print(calculator.setText(" 2 +7- 3+ 5-   1 -9 +       4     ").calculate())
 }
