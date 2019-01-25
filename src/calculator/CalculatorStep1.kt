@@ -11,7 +11,7 @@ import java.io.IOException
 /*
 * STEP 1
 * In this step, the calculator is prepared to performing 2 operations: + and - .
-* It receives a string and perform it calculation (numbers 0 to 9)
+* It receives a string and performs its calculation (numbers 0 to 9)
 * */
 class Calculator(private var text: String) {
     fun setText(text: String): Calculator {
@@ -46,8 +46,9 @@ class Calculator(private var text: String) {
     private class TextToOperationConversor(private var text: String){
         private var numberList: MutableList<Float> = mutableListOf()
         private var operations: MutableList<OperationType> = mutableListOf()
+
         var result: Float = -1f
-        get() {
+        get()  {
             this.setLists()
             val arithmeticLogic = ArithmeticLogic(-1f, -1f, OperationType.SUM)
             var partialResult: Float = 0f
