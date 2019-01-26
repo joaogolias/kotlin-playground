@@ -2,8 +2,9 @@ package calculator.step2
 
 import calculator.verifyRegex
 
-class CharSequenceConverter {
-    private fun isNumber(test: Char): Boolean {
+class CharConverter {
+
+    fun isNumberChar(test: Char): Boolean {
         if(test.verifyRegex("^[0-9]$")) {
             return true
         }
@@ -13,15 +14,15 @@ class CharSequenceConverter {
         return false
     }
 
-    private fun isOperation(test: Char): Boolean {
+    fun <K, V>isOperation(validOperations: Map<K,V>, test: K): Boolean {
         return validOperations.containsKey(test)
     }
 
-    private fun convertToFloat(text: String): Float {
+    fun convertToFloat(text: String): Float {
         return text.toFloat()
     }
 
-    private fun convertToOperationType(operationKey: Char): OperationType {
+    fun <K, V>convertToOperationType(validOperations: Map<K,V>, operationKey: K): V {
         return validOperations.getValue(operationKey)
     }
 }

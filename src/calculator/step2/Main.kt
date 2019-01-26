@@ -1,7 +1,5 @@
 package calculator.step2
 
-import calculator.verifyRegex
-
 /*
 * CALCULATOR PROJECT
 * It is a project of building a calculator for 6 operations: +, -, *, /, ! and ^
@@ -12,17 +10,13 @@ import calculator.verifyRegex
 * STEP 2
 * In this step, the calculator is prepared to performing 2 operations: +, - and * .
 * It receives a string and performs its calculation (all numbers, including decimal ones)
+* It also respects math priority operation
 * */
 
-
-
-
-
-
 fun main() {
-    val calculator = CalculatorStep2("")
-    print("2+2+5-4 = ")
-    println(calculator.setText("2  + 2   + 5-   4").calculate())
-    print("2+7-3+5-1-9+4 = ")
-    print(calculator.setText(" 2 +7- 3+ 5-   1 -9 +       4     ").calculate())
+    val calculator = Calculator("")
+    var text = "2+2.5*2+2*3-2*10"
+    print("${text} = ")
+    println(calculator.setText(text).calculate())
 }
+

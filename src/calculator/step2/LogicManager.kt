@@ -1,62 +1,57 @@
-import calculator.verifyRegex
+import calculator.step2.CharConverter
+import calculator.step2.OperationIdentifier
 
-class LogicUnit(private var text: String){
-    private var numberList: MutableList<Float> = mutableListOf()
-    private var operations: MutableList<OperationType> = mutableListOf()
+class LogicManager(private var text: String){
+    private var numberList: MutableList<Float?> = mutableListOf()
+    private var operations: MutableList<OperationIdentifier> = mutableListOf()
+    val charConverter = CharConverter()
     val validOperations = OperationType.values().associateBy(OperationType::operationSymbol)
 
     var result: Float = -1f
         get()  {
             this.setLists()
-            var partialResult = 0f
-            numberList.forEachIndexed{ index, number ->
-                if(index == 0) partialResult = number
-                else {
-                    val operation = operations[index-1]
-                    partialResult = operation.run(partialResult, number)
+            var partialResult: Float
+            var operationList = operations.toList().sortedByDescending { it.type.priority }
+            operationList.forEachIndexed { index, operation ->
+                var firstOperandIndex = operation.firstOperandIndex
+                var secondOperandIndex = operation.seconOperandIndex
+                while(numberList[firstOperandIndex] == null && firstOperandIndex != 0) {
+                    firstOperandIndex--
                 }
+                while(numberList[secondOperandIndex] == null && secondOperandIndex != 0){
+                    secondOperandIndex--
+                }
+                partialResult = operation.type.run(
+                    numberList[firstOperandIndex] ?: 0f,
+                    numberList[secondOperandIndex] ?: 0f)
+                numberList[firstOperandIndex] = partialResult
+                numberList[secondOperandIndex] = null
             }
-            return partialResult
+            return numberList[0] ?: 0f
         }
 
     private fun setLists() {
         this.text = this.text.replace(Regex(" +"), "")
-        for (char in text) {
-            var finalNumber = ""
-            if(isNumber(char)) {
-                finalNumber += char
-            } else {
-                if(isOperation(char)) {
-                    val convertedOperation = convertToOperationType(char)
-                    operations.add(convertedOperation)
-
-                    val convertedNumber = convertToFloat(finalNumber)
+        var finalNumber = ""
+        var operationArrayIndex = 0
+        text.forEachIndexed { index, char ->
+            if(charConverter.isNumberChar(char)) {
+                finalNumber += char.toString()
+                if(index == text.length - 1) {
+                    val convertedNumber = charConverter.convertToFloat(finalNumber)
                     numberList.add(convertedNumber)
                 }
+            } else {
+                if((charConverter.isOperation(validOperations, char))) {
+                    val convertedOperation = charConverter.convertToOperationType(validOperations, char)
+                    operations.add(OperationIdentifier(convertedOperation, operationArrayIndex, operationArrayIndex+1))
+                    operationArrayIndex++
+                }
+                val convertedNumber = charConverter.convertToFloat(finalNumber)
+                numberList.add(convertedNumber)
+                finalNumber = ""
             }
+
         }
     }
-
-    private fun isNumber(test: Char): Boolean {
-        if(test.verifyRegex("^[0-9]$")) {
-            return true
-        }
-        if(test.toString().contains('.')) {
-            return true
-        }
-        return false
-    }
-
-    private fun isOperation(test: Char): Boolean {
-        return validOperations.containsKey(test)
-    }
-
-    private fun convertToFloat(text: String): Float {
-        return text.toFloat()
-    }
-
-    private fun convertToOperationType(operationKey: Char): OperationType {
-        return validOperations.getValue(operationKey)
-    }
-
 }

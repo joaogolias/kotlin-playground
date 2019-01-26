@@ -13,8 +13,8 @@ import java.io.IOException
 * In this step, the calculator is prepared to performing 2 operations: + and - .
 * It receives a string and performs its calculation (numbers 0 to 9)
 * */
-class Calculator(private var text: String) {
-    fun setText(text: String): Calculator {
+class CalculatorStep1(private var text: String) {
+    fun setText(text: String): CalculatorStep1 {
         this.text = text
         return this
     }
@@ -88,7 +88,7 @@ class Calculator(private var text: String) {
 }
 
 fun main() {
-    val calculator = Calculator("")
+    val calculator = CalculatorStep1("")
     print("2+2+5-4 = ")
     println(calculator.setText("2  + 2   + 5-   4").calculate())
     print("2+7-3+5-1-9+4 = ")
