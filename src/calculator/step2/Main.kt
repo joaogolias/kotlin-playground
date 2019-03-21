@@ -3,7 +3,7 @@ package calculator.step2
 /*
 * CALCULATOR PROJECT
 * It is a project of building a calculator for 6 operations: +, -, *, /, ! and ^
-* The goal is performing calculations like [(1+2)*3-4*{10+3})ˆ3]!, for example
+* The goal is performing calculations like {[(1+2)*3-4*(10+3)]ˆ3}!, for example
 * */
 
 /*
@@ -15,8 +15,8 @@ package calculator.step2
 
 fun main() {
     val calculator = Calculator("")
-    var text = "2+2.5*2+2*3-2*10"
-    print("${text} = ")
+    var text = "2+2.5*2+2*3"
+    print("$text = ")
     println(calculator.setText(text).calculate())
 }
 

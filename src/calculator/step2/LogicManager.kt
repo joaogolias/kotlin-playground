@@ -11,7 +11,7 @@ class LogicManager(private var text: String){
         get()  {
             this.setLists()
             var partialResult: Float
-            var operationList = operations.toList().sortedByDescending { it.type.priority }
+            val operationList = operations.toList().sortedByDescending { it.type.priority }
             operationList.forEachIndexed { index, operation ->
                 var firstOperandIndex = operation.firstOperandIndex
                 var secondOperandIndex = operation.seconOperandIndex
