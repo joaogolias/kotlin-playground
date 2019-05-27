@@ -18,9 +18,12 @@ class Stack<T> {
         return list.find(predicate)
     }
 
-    fun pop(): T {
-        val lastElement = list[size - 1]
-        list.remove(lastElement)
+    fun pop(): T? {
+        var lastElement: T? = null
+        if(size > 0) {
+            lastElement = list[size - 1]
+            list.remove(lastElement)
+        }
         return lastElement
     }
 
