@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c0e16c3-6fb2-4db8-b63d-8bcc3027f42a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/listsPlayground/ListOrientation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/numbers/GetFirstDigit.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,15 +18,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/stringsPlayground/GetFirstIndexOfASubstring.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stringsPlayground/ReplaceLastDigits.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -35,11 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listsPlayground/ListOrientation.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/numbers/GetFirstDigit.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -171,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/stringsPlayground/GetFirstIndexOfASubstring.kt" />
         <option value="$PROJECT_DIR$/src/stringsPlayground/ReplaceLastDigits.kt" />
         <option value="$PROJECT_DIR$/src/listsPlayground/ListOrientation.kt" />
+        <option value="$PROJECT_DIR$/src/numbers/GetFirstDigit.kt" />
       </list>
     </option>
   </component>
@@ -183,6 +184,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,7 +219,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,7 +228,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559342652118" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561564703319" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -264,20 +265,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.listsPlayground.ListOrientationKt">
-    <configuration name="dataStructures.StackKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="kotlin-playground" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="dataStructures.StackKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.numbers.GetFirstDigitKt">
     <configuration name="listsPlayground.ListOrientationKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-playground" />
       <option name="VM_PARAMETERS" />
@@ -286,6 +274,19 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="listsPlayground.ListOrientationKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="numbers.GetFirstDigitKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlin-playground" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="numbers.GetFirstDigitKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -332,11 +333,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.numbers.GetFirstDigitKt" />
         <item itemvalue="Kotlin.listsPlayground.ListOrientationKt" />
         <item itemvalue="Kotlin.stringsPlayground.ReplaceLastDigitsKt" />
         <item itemvalue="Kotlin.stringsPlayground.GetFirstIndexOfASubstringKt" />
         <item itemvalue="Kotlin.observables.FirstObservableKt" />
-        <item itemvalue="Kotlin.dataStructures.StackKt" />
       </list>
     </recent_temporary>
   </component>
@@ -368,6 +369,8 @@
       <workItem from="1558978599178" duration="1120000" />
       <workItem from="1559002955726" duration="1605000" />
       <workItem from="1559336525915" duration="436000" />
+      <workItem from="1560689555716" duration="220000" />
+      <workItem from="1561564407441" duration="252000" />
     </task>
     <servers />
   </component>
@@ -404,7 +407,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29945000" />
+    <option name="totallyTimeSpent" value="30417000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -417,8 +420,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31733525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3273639" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -428,7 +432,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32923833" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26167077" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26167077" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42751843" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -774,6 +778,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/numbers/GetFirstDigit.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
