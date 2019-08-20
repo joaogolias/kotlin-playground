@@ -1,22 +1,20 @@
 package numberprinter
 
-fun main() {
-    NumberPrinterAccelerator().start()
-}
+import kotlin.math.abs
 
-fun generateEventArray(quantity: Int = 100): List<Event> {
-    val arr = mutableListOf<Event>()
-    for (i in 0 until quantity) {
-        arr.add(Event.MY_EVENT)
-    }
-    return arr.toList()
+fun main() {
+    NumberPrinterAccelerator()
+        .setInitialValue(1000)
+        .setMinimunValue(900)
+        .setAccelerationType(AccelerationType.DECREASE)
+        .start()
 }
 
 class NumberPrinterAccelerator {
     private val THREAD_SLEEP_MIN_TIME: Long = 50
     private val THREAD_SLEEP_MAX_TIME: Long = 1000
 
-    var increaseMomentsList = listOf(3, 5, 10, 15)
+    var increaseMomentsList = listOf(3, 5, 10, 20)
 
     private val accelerationCoefficient: Float by lazy {
         (THREAD_SLEEP_MAX_TIME - THREAD_SLEEP_MIN_TIME)*1f/increaseMomentsList.size
@@ -24,12 +22,14 @@ class NumberPrinterAccelerator {
 
     private var currentSleepTime = THREAD_SLEEP_MAX_TIME
     private var number: Int = 1
+    private var initialValue: Int = 1
     private var accelerationType = AccelerationType.INCREASE
     private var forceStop = false
     private var minimumValueForNumber: Int = 0
 
-    fun setInitialTime(value: Int): NumberPrinterAccelerator {
+    fun setInitialValue(value: Int): NumberPrinterAccelerator {
         number = value
+        initialValue = value
         return this
     }
 
@@ -49,11 +49,7 @@ class NumberPrinterAccelerator {
 
     fun start(){
         forceStop = false
-        val arr = generateEventArray(900)
-        for(event in arr) {
-            if(forceStop) {
-                break
-            }
+        while(!forceStop) {
             show(number, currentSleepTime)
             updateNumber()
             updateCurrentSleepTime(number)
@@ -61,7 +57,7 @@ class NumberPrinterAccelerator {
     }
 
     private fun updateCurrentSleepTime(currentNumber: Int) {
-        if(increaseMomentsList.indexOf(currentNumber) != -1){
+        if(increaseMomentsList.indexOf(abs(initialValue - currentNumber)) != -1){
             val newSleepTime = currentSleepTime - accelerationCoefficient.toLong()
             if(newSleepTime >= THREAD_SLEEP_MIN_TIME) {
                 currentSleepTime = newSleepTime
@@ -75,7 +71,11 @@ class NumberPrinterAccelerator {
                 number += 1
             }
             AccelerationType.DECREASE -> {
-                number -= 1
+                if(number - 1 < minimumValueForNumber) {
+                    forceStop = true
+                } else {
+                    number -= 1
+                }
             }
         }
     }
@@ -92,9 +92,5 @@ class NumberPrinterAccelerator {
 enum class AccelerationType {
     INCREASE,
     DECREASE
-}
-
-enum class Event{
-    MY_EVENT;
 }
 
