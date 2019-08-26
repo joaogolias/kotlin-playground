@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c0e16c3-6fb2-4db8-b63d-8bcc3027f42a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/numbers/ToIntOrNull.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/numberprinter/NumberPrinter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/numberprinter/NumberPrinter.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,12 +16,12 @@
     <SUITE FILE_PATH="coverage/kotlin_playground$calculator_step2_MainKt.ic" NAME="calculator.step2.MainKt Coverage Results" MODIFIED="1548534396902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/numberprinter/NumberPrinter.kt">
+        <entry file="file://$PROJECT_DIR$/src/numbers/ToIntOrNull.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+            <state relative-caret-position="75">
+              <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -95,10 +95,11 @@
         <option value="$PROJECT_DIR$/src/listsPlayground/ListIntercalation.kt" />
         <option value="$PROJECT_DIR$/src/numbers/DateString.kt" />
         <option value="$PROJECT_DIR$/src/numberprinter/NumberPrinter.kt" />
+        <option value="$PROJECT_DIR$/src/numbers/ToIntOrNull.kt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="826" />
@@ -108,7 +109,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,6 +120,12 @@
               <item name="kotlin-playground" type="b2602c69:ProjectViewProjectNode" />
               <item name="kotlin-playground" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlin-playground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlin-playground" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="numbers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kotlin-playground" type="b2602c69:ProjectViewProjectNode" />
@@ -137,6 +143,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -146,7 +153,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566332780940" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566839629494" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -183,7 +190,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.numberprinter.NumberPrinterKt">
+  <component name="RunManager" selected="Kotlin.numbers.ToIntOrNullKt">
     <configuration name="listsPlayground.ListIntercalationKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-playground" />
       <option name="VM_PARAMETERS" />
@@ -223,6 +230,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="numbers.ToIntOrNullKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlin-playground" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="numbers.ToIntOrNullKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="regex.RegexTestsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-playground" />
       <option name="VM_PARAMETERS" />
@@ -236,26 +256,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="stringsPlayground.StringsReplacementKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="kotlin-playground" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="stringsPlayground.StringsReplacementKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.numbers.ToIntOrNullKt" />
         <item itemvalue="Kotlin.numberprinter.NumberPrinterKt" />
         <item itemvalue="Kotlin.numbers.DateStringKt" />
         <item itemvalue="Kotlin.listsPlayground.ListIntercalationKt" />
         <item itemvalue="Kotlin.regex.RegexTestsKt" />
-        <item itemvalue="Kotlin.stringsPlayground.StringsReplacementKt" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +305,8 @@
       <workItem from="1563302697087" duration="975000" />
       <workItem from="1563728322203" duration="178000" />
       <workItem from="1564070036368" duration="1330000" />
-      <workItem from="1566307286690" duration="5083000" />
+      <workItem from="1566307286690" duration="5134000" />
+      <workItem from="1566826251306" duration="967000" />
     </task>
     <servers />
   </component>
@@ -335,7 +343,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46302000" />
+    <option name="totallyTimeSpent" value="47320000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -347,10 +355,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.38108882" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38681948" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -360,7 +367,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32923833" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3009828" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3009828" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42751843" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -767,6 +774,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="70" column="21" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/numbers/ToIntOrNull.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
         </state>
       </provider>
     </entry>
